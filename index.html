@@ -1,256 +1,1045 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Clara Richter</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara A. Richter - Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #fff8f0;
+            --color-surface: #ffffff;
+            --color-text: #2d2d2d;
+            --color-text-light: #666666;
+            --color-orange: #ff6b35;
+            --color-coral: #ff8e71;
+            --color-peach: #ffb5a7;
+            --color-yellow: #ffc857;
+            --color-mint: #a8e6cf;
+            --color-sky: #ffd3b6;
+            --max-width: 1300px;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1>Hi, I'm Clara</h1>
-						<p>M.S. in Data Science and Analytics<br />
-						Welcome to my data science portfolio</p>
-					</header>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            overflow-x: hidden;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">About Me</a></li>
-							<li><a href="#first">Recent Projects</a></li>
-						</ul>
-					</nav>
+        /* Floating shapes background */
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        .shape {
+            position: absolute;
+            opacity: 0.15;
+        }
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>About Me</h2>
-										</header>
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            border-radius: 50% 40% 60% 50%;
+            top: 10%;
+            right: 10%;
+            animation: float 20s ease-in-out infinite;
+        }
 
-										<p>Hello! I am a recent graduate of Georgetown University's Data science and Analytics Master's program, and I am currently seeking a data science position in the DC area. I am a passionate and creative person, and what draws me to data science is how it can be both analytical and imaginative.</p>
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-yellow), var(--color-peach));
+            border-radius: 60% 40% 50% 60%;
+            bottom: 20%;
+            left: 5%;
+            animation: float 15s ease-in-out infinite reverse;
+        }
 
-											<p>To me, data science is not just about analyzing data and finding patterns, but also about telling a story through the data. I believe that data science can be a powerful tool for discovering insights and solving complex problems in any industry.</p>
-											
-										<p>When I am not working with data, I enjoy exploring my creative side through art. I love to paint, draw, sew, crochet, and knit, and I host monthly craft nights at my apartment to share my love of crafting with others. I also enjoy staying active by running and hiking, and I always have a good book on hand to read in my downtime.</p>
-											
-									<p>Thank you for visiting my website, and I look forward to connecting with you!</p>
+        .shape-3 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, var(--color-mint), var(--color-sky));
+            border-radius: 40% 60% 50% 40%;
+            top: 50%;
+            left: 50%;
+            animation: float 18s ease-in-out infinite;
+        }
 
-										
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(5deg); }
+            50% { transform: translate(-20px, 20px) rotate(-5deg); }
+            75% { transform: translate(20px, 30px) rotate(3deg); }
+        }
 
-										<ul class="icons">
-											<h4>Let's get in touch</h4>
-											<li><a href="https://www.linkedin.com/in/clara-richter-/" class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
-											<li><a href="https://github.com/Clara-Richter" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-											<li><a href="mailto:clararichter248@gmail.com?subject=Hello!" class="icon solid fa-envelope alt"><span class="label">Mail</span></a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/claraPic.png" alt="" /></span>
-								</div>
-							</section>
+        header {
+            background: rgba(255, 248, 240, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(255, 107, 53, 0.1);
+        }
 
-						<!-- First Project -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Examining Political Engagement and Sentiment on Reddit</h2>
-									<p>A "big data" analysis using Spark and Azure Databricks.</p>
-								
-									<span class="image"><img src="projects/big_data_reddit/political.png" alt="" height=200 width=500 /> </span> 
-								</header>
-									<p>This project involved analyzing data from Reddit using big data technologies, such as Apache Spark, to explore various aspects of the data, including sentiment analysis, topic modeling, and network analysis. A website was created to showcase the findings, which include visualizations and interactive dashboards to help users better understand the data. </p>
-									
-									<p>
-									  <b>Specific code I wrote</b>: I helped work on everything.
-									</p>
-									
-								<footer class="major">
-									<ul class="actions special">
-											<li><a href="https://clara-richter.github.io/Big-Data-Reddit2/" class="button">Project Website</a></li>
-										</ul>
-									</ul>
-								</footer>
-							</section>
+        nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-						<!--  Project -->
-						<section id="first" class="main special">
-							<header class="major">
-								<h2>MedEase: Using NLP to better understand medical documents.</h2>
-								<span class="image"><img src="projects/MedEase/MedEase.jpg" alt="" height=200 width=400 /><p style="font-size: 9px;"><a href="https://www.nerdwallet.com/article/taxes/medical-expense-tax-deduction" target="_blank">source</a></p></span>
-							</header>
-							<p>MedEase is a tool that uses NLP to help users better understand medical text. This project is designed to help the average person who does not have strong medical knowledge understand medical text such as discharge notes, medical transcriptions, or any other type of medical text. MedEase is built using Python code and a Dash website. </p>
-							
-									<p>
-									  <b>Specific code I wrote</b>: I had a hand in all the code except the summarization.py.
-									</p>
-							
-							<footer class="major">
-								<ul class="actions special">
-										<li><a href="https://github.com/Clara-Richter/ANLY521--Group-Project.git" class="button">Project Repo</a></li>
-									</ul>
-								</ul>
-							</footer>
-						</section>							
+        .logo {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
 
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
 
-						<!-- Second Project -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Gender Discrimination in STEM</h2>
-									<span class="image"><img src="projects/gender_discrimination/gender.png" alt="" height=200 width=400 /><p style="font-size: 9px;"><a href="https://www.newyorker.com/magazine/2017/11/20/the-tech-industrys-gender-discrimination-problem" target="_blank">source</a></p></span>
-									<!-- <span class="image"><img src="projects/gender_discrimination/gender_equality_stock2.jpg" alt="" height=200 width=300 /><p style="font-size: 9px;">Photo by <a href="https://unsplash.com/ja/@priscilladupreez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Priscilla Du Preez</a> on <a href="https://unsplash.com/photos/KNf9AeHpI9o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p></span> -->
-								</header>
-								<p>Gender discrimination remains a significant human rights issue, as women worldwide experience job segregation, employment inequity, pay gaps, and limited freedom in career choice. As a response to this issue, our research provides a comprehensive set of tools to examine gender inequities in education, labor force participation, and career advancement over time and by location. Our team, composed of women in tech, focused specifically on gender disparities in STEM fields. Through our analysis, we examined how men and women differ in terms of test scores, entrance into professional fields, labor participation, parental leave, and salaries. Our goal is to contribute to a greater understanding of the pervasive effects of gender discrimination and to promote evidence-based solutions that can create a more equitable and inclusive society.</p>
-								
-								<p>
-									  <b>Specific code I wrote</b>: I helped work on everything but was specifically in charge of the <a href="https://github.com/Clara-Richter/Gender-Disparity-in-STEM/blob/main/Viz_Scripts/plotly_stem_occupations.R">Women In STEM Occupations And Their Earnings visualization.</a>
-									</p>
-								
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="https://clara-richter.github.io/Gender-Disparity-in-STEM/" class="button">Project Website</a></li>
-										<li><a href="https://github.com/Clara-Richter/Gender-Disparity-in-STEM" class="button">Project Repo</a></li>
-									</ul>
-								</footer>
-							</section>
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-							<!-- Third Project -->
-							<section id="third" class="main special">
-								<header class="major">
-									<h2>Big Data Derby</h2>
-									<p>Comparing neural networks with traditional machine learning methods.</p>
-									<span class="image"><img src="projects/big_data_derby/derby.png" alt="" height=200 width=400 /><p style="font-size: 9px;"></p></span>
-								</header>
-								<p>This study aims to determine the feasibility of predicting the winner of a horse race, in response to the <a href="https://www.kaggle.com/competitions/big-data-derby-2022">Big Data Derby 2022 Kaggle Competition</a>. The competition seeks to improve equine welfare and help owners, trainers, and veterinarians assess competition strategy. We built an artificial neural network (ANN) model that uses the Keras functional API to process numerical, categorical, and text data in order to predict the target variables. The output of our ANN model was compared to traditional machine learning methods such as random forest, logistic regression, and gradient boost. Our research provides an in-depth assessment of the effectiveness of the ANN model in predicting the winner of a horse race, and contributes to ongoing efforts to improve equine welfare through data analysis and machine learning.</p>
-								
-									<p>
-									  <b>Specific code I wrote</b>: <br>
-									  <a href="https://github.com/Clara-Richter/590-Group-Project/blob/main/code/EDA/EDA_CG.ipynb">EDA and Data Exploration</a><br>
-									  <a href="https://github.com/Clara-Richter/590-Group-Project/blob/main/code/NN/NN_odds_model.ipynb"> Neural Network for Odds Variable</a>
-									</p>
-								
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="projects/big_data_derby/Summary_Write_up.pdf" class="button">Project Report</a></li>
-										<li><a href="https://github.com/Clara-Richter/590-Group-Project" class="button">Project Repo</a></li>
-									</ul>
-								</footer>
-							</section>
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-orange), var(--color-coral));
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
 
-							<!-- Fourth Project -->
-							<section id="fourth" class="main special">
-								<header class="major">
-									<h2>COVID-19 Vulnerability in America</h2>
-									<span class="image"><img src="projects/covid/COVID-19_Virus.png" alt="" height=200 width=400 /><p style="font-size: 9px;">Photo by <a href="https://vcahospitals.com/know-your-pet/coronavirus-disease-covid19">vcahospitals</a></p></span>
-								</header>
-								<p>During my master's degree program, my group and I completed a project for the Probabilistic Modeling and Statistical Computing course using R. We investigated inequality in risk and exposure to COVID-19 across the United States, with a particular emphasis on college campuses and prisons. Our analysis included conditional probability models, hypothesis testing, and multivariate regression analysis. We aimed to answer several questions, such as whether people in different regions of the country face different risk profiles for contracting COVID-19, whether certain subsets of the population are more susceptible to the virus, and what factors influence the risk. Our investigation focused on population size, mask usage, and political leaning as the primary risk factors.</p>
-								
-									<p>
-									  <b>Specific code I wrote</b>: I helped work on everything but was specifically in charge of the <a href="https://github.com/Clara-Richter/GU-ANLY511-FinalProject/blob/main/mask-use/MaskUse.pdf">mask-use analysis.</a>
-									</p>
-								
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="projects/covid/511_Final_Report.pdf" class="button">Project Report</a></li>
-										<li><a href="https://github.com/Clara-Richter/GU-ANLY511-FinalProject" class="button">Project Repo</a></li>
-									</ul>
-								</footer>
-							</section>
+        .nav-links a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
 
-							<!--  Project -->
-							<section id="fourth" class="main special">
-								<header class="major">
-									<h2>The Key to $uccess</h2>
-									<span class="image"><img src="projects/success/graduation-cap.jpg" alt="" height=200 width=400 /><p style="font-size: 9px;">Photo by <a href="https://www.collegeraptor.com/find-colleges/articles/college-search/crafting-high-school-schedule-college-success/">vcahospitals</a></p></span>
-								</header>
-								<p>This data science project explored the importance of education for success. Data was gathered, some with APIs (Twitter and Wiki).  Data was cleaned and prepped. The methods and models used included Clustering, ARM and Networking, Decision Trees, Naïve Bayes, SVM.</p>
-								
-								<p>
-									  <b>Specific code I wrote</b>: Everything (this was a solo project).
-									</p>
-								
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="http://clararichter.georgetown.domains/" class="button">Project Website</a></li>
-									</ul>
-								</footer>
-							</section>
+        .nav-links a:hover {
+            color: var(--color-orange);
+        }
 
-							<!-- Fith Project -->
-							<section id="fith" class="main special">
-								<header class="major">
-									<h2>SQL Airport project</h2>
-									<span class="image"><img src="projects/SQL/airplane.png" alt="" height=200 width=300 /><p style="font-size: 9px;"></p></span>
-								</header>
-								<p>The SQL airport project is a mini-project that I completed as part of a database management course. The project involved creating a database schema and queries for a hypothetical airport, with the goal of efficiently managing information about flights, passengers, and airport staff.</p>
+        /* Hero Section */
+        .hero {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 8rem 3rem 6rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
 
-							<p>The project required me to analyze the airport's data needs and design a normalized database schema that avoids redundancy and maintains data integrity. I used SQL to create tables, define primary and foreign keys, and insert sample data.</p>
-									
-						<p>I then developed a series of queries that enable users to retrieve and update data on flights, passengers, and staff. The queries cover a range of scenarios, such as searching for flights by date, time, or destination, updating passenger information, and generating reports on staff schedules and availability.</p>
-									
-					<p>Through this project, I gained valuable experience in database design, SQL query writing, and data analysis. The project demonstrates my ability to design efficient and effective database solutions and to leverage SQL to manage complex data sets.
-									</p>
-									
-									<p>
-									  <b>Specific code I wrote</b>: Everything (this was a solo project).
-									  
-									  
-									</p>
-									
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="https://github.com/Clara-Richter/SQL-airport-project" class="button">Project Repo</a></li>
-									</ul>
-								</footer>
-							</section>
-					</div>
+        .hero-content {
+            animation: fadeInLeft 1s ease forwards;
+            opacity: 0;
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Let's get in touch</h2>
-							<dl class="alt">
-								<dt>City</dt>
-								<dd>Arlington, VA &bull; USA</dd>
-								<dt>Email</dt>
-								<dd><a href="mailto:clararichter248@gmail.com?subject=Hello!">clararichter248@gmail.com</a></dd>
-								<dt>Download</dt>
-								<dd><a href="resume.pdf">my resume</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/clara-richter-/" class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
-								<li><a href="https://github.com/Clara-Richter" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="mailto:clararichter248@gmail.com?subject=Hello!" class="icon solid fa-envelope alt"><span class="label">Mail</span></a></li>
-								<li><a href="resume.pdf" class="icon solid fa-download alt"><span class="label">Resume</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-			</div>
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(3rem, 7vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-coral) 50%, var(--color-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .hero .tagline {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            color: var(--color-text);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
 
-	</body>
+        .hero .bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-text-light);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 3px solid transparent;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--color-orange);
+            border-color: var(--color-orange);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-orange);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .hero-illustration {
+            position: relative;
+            height: 500px;
+            animation: fadeInRight 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .illustration-blob {
+            position: absolute;
+            border-radius: 50% 40% 60% 50%;
+            animation: blobMove 8s ease-in-out infinite;
+        }
+
+        .blob-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.3;
+        }
+
+        .blob-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, var(--color-yellow), var(--color-peach));
+            bottom: 50px;
+            right: 20px;
+            opacity: 0.3;
+            animation-delay: -4s;
+        }
+
+        .blob-3 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-mint), var(--color-sky));
+            top: 100px;
+            left: 0;
+            opacity: 0.3;
+            animation-delay: -2s;
+        }
+
+        @keyframes blobMove {
+            0%, 100% { border-radius: 50% 40% 60% 50%; }
+            25% { border-radius: 40% 60% 50% 60%; }
+            50% { border-radius: 60% 50% 40% 50%; }
+            75% { border-radius: 50% 60% 50% 40%; }
+        }
+
+        /* Section Styles */
+        section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 5rem 3rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text {
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.1);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--color-text-light);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contact-links a {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .profile-photo-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-photo-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .profile-photo {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 50% 40% 60% 50%;
+            box-shadow: 0 15px 50px rgba(255, 107, 53, 0.25);
+            animation: profileFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% { 
+                border-radius: 50% 40% 60% 50%;
+                transform: translateY(0);
+            }
+            50% { 
+                border-radius: 40% 60% 50% 40%;
+                transform: translateY(-10px);
+            }
+        }
+
+        .photo-decoration-1 {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            border: 3px solid var(--color-orange);
+            border-radius: 60% 40% 50% 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.3;
+            z-index: -1;
+            animation: rotate 20s linear infinite;
+        }
+
+        .photo-decoration-2 {
+            position: absolute;
+            width: 140%;
+            height: 140%;
+            border: 3px solid var(--color-coral);
+            border-radius: 40% 60% 50% 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+            z-index: -1;
+            animation: rotate 15s linear infinite reverse;
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-content h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .project-content p {
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, var(--color-peach), var(--color-sky));
+            color: var(--color-text);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .project-links .btn {
+            padding: 0.75rem 1.75rem;
+            font-size: 0.9rem;
+        }
+
+        /* Experience Section */
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .experience-card {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.1);
+            position: relative;
+            border-left: 6px solid;
+            border-image: linear-gradient(180deg, var(--color-orange), var(--color-coral)) 1;
+        }
+
+        .experience-card h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-orange);
+            font-weight: 600;
+        }
+
+        .date {
+            display: block;
+            color: var(--color-text-light);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .experience-card ul {
+            list-style: none;
+            color: var(--color-text-light);
+        }
+
+        .experience-card li {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .experience-card li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--color-orange);
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.75rem 0;
+            color: var(--color-text-light);
+            border-bottom: 2px solid rgba(255, 107, 53, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category li:hover {
+            color: var(--color-orange);
+            padding-left: 0.5rem;
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .education-card h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .education-card .institution {
+            color: var(--color-orange);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .education-card .details {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-orange), var(--color-coral));
+            color: white;
+            text-align: center;
+            padding: 3rem;
+            margin-top: 6rem;
+            border-radius: 50px 50px 0 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 4rem 1.5rem;
+                gap: 3rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-illustration {
+                height: 350px;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Clara Richter ✨</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Clara A. Richter</h1>
+                <p class="tagline">Data Scientist ✨</p>
+                <p class="bio">Combining technical expertise with creative problem-solving to transform complex data into actionable insights. Building end-to-end solutions that empower teams and drive impact.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="/cdn-cgi/l/email-protection#583b34392a392a313b302c3d2a6a6c60183f35393134763b3735" class="btn btn-secondary">Let's Chat!</a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="illustration-blob blob-1"></div>
+                <div class="illustration-blob blob-2"></div>
+                <div class="illustration-blob blob-3"></div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Background and expertise</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I hold a Bachelor’s degree in Physics (Mount Holyoke College) and a Master’s degree in Data Science and Analytics (Georgetown University), and I am highly proficient in Python and SQL. For the past two years, I have worked as a contractor supporting the U.S. Air Force Acquisition team, where I have built end-to-end tools for data processing and visualization.</p>
+                    
+                    <p>Much of my work has focused on qualitative data, giving me strong experience in natural language processing and applied AI techniques. As the sole technical contributor on my team, I have managed all aspects of tool development—from designing data pipelines to deploying and maintaining tools that are accessible and reliable for non-technical users.</p>
+                    
+                    <p>One of my greatest strengths is my ability to communicate complex technical ideas clearly. I place a strong emphasis on visualizations and data storytelling to ensure insights are understandable, actionable, and aligned with  user needs.</p>
+                    
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/clara-richter-/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Clara-Richter" target="_blank">GitHub</a>
+                        <a href="https://epicplanningtool.com/" target="_blank">EPIC Platform</a>
+                        <a href="/cdn-cgi/l/email-protection#751619140714071c161d01100747414d351218141c195b161a18">Email</a>
+                        <a href="tel:4016017745">Phone</a>
+                        <a href="resume.pdf" download>📄 Download Resume</a>
+                    </div>
+                </div>
+                <div class="profile-photo-container">
+                    <div class="profile-photo-wrapper">
+                        <img src="images/claraPic.png" alt="Clara Richter" class="profile-photo">
+                        <div class="photo-decoration-1"></div>
+                        <div class="photo-decoration-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A showcase of my technical work and analysis</p>
+            </div>
+            <div class="projects-grid">
+
+               <article class="project-card">
+                    <img src="projects/News_Network/Network_pic.png" alt="Network Analysis Tool" class="project-image">
+                    <div class="project-content">
+                        <h3>Network Analysis Tool for Defense Industry News</h3>
+                        <p>Built an automated NLP tool to process daily defense industry news articles, extract key themes, and visualize relationships through interactive network graphs, enabling U.S. Air Force leadership to quickly identify trends and make data-driven decisions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Pyvis</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Network Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/News_Network/Project_Network.pdf" class="btn btn-primary" target="_blank">View Project Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="projects/big_data_reddit/political.png" alt="Reddit Analysis" class="project-image">
+                    <div class="project-content">
+                        <h3>Political Engagement on Reddit</h3>
+                        <p>Analyzed Reddit data using Apache Spark to explore sentiment analysis, topic modeling, and network analysis with interactive visualizations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Apache Spark</span>
+                            <span class="tech-tag">Azure Databricks</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Data Viz</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://clara-richter.github.io/Big-Data-Reddit2/" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="projects/MedEase/MedEase.jpg" alt="MedEase" class="project-image">
+                    <div class="project-content">
+                        <h3>MedEase: Medical NLP Tool</h3>
+                        <p>Developed an NLP-powered tool to help non-medical professionals understand complex medical documents and transcriptions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Dash</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Clara-Richter/ANLY521--Group-Project.git" class="btn btn-primary" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="projects/gender_discrimination/gender.png" alt="Gender in STEM" class="project-image">
+                    <div class="project-content">
+                        <h3>Gender Discrimination in STEM</h3>
+                        <p>Comprehensive analysis of gender inequities examining test scores, labor participation, and salary disparities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Data Viz</span>
+                            <span class="tech-tag">Statistics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://clara-richter.github.io/Gender-Disparity-in-STEM/" class="btn btn-primary" target="_blank">View Project</a>
+                            <a href="https://github.com/Clara-Richter/Gender-Disparity-in-STEM" class="btn btn-secondary" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="projects/big_data_derby/derby.png" alt="Big Data Derby" class="project-image">
+                    <div class="project-content">
+                        <h3>Big Data Derby ML Competition</h3>
+                        <p>Built neural network models using Keras to predict horse race outcomes, comparing performance against traditional ML methods.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">Neural Networks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/big_data_derby/Summary_Write_up.pdf" class="btn btn-primary" target="_blank">View Report</a>
+                            <a href="https://github.com/Clara-Richter/590-Group-Project" class="btn btn-secondary" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="projects/covid/COVID-19_Virus.png" alt="COVID Analysis" class="project-image">
+                    <div class="project-content">
+                        <h3>COVID-19 Vulnerability Analysis</h3>
+                        <p>Statistical analysis of COVID-19 risk factors using probability models, hypothesis testing, and multivariate regression.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Statistical Modeling</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/covid/511_Final_Report.pdf" class="btn btn-primary" target="_blank">View Report</a>
+                            <a href="https://github.com/Clara-Richter/GU-ANLY511-FinalProject" class="btn btn-secondary" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p>My professional journey and achievements</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Data Scientist (CGI Federal)</h3>
+                    <span class="date">U.S. Air Force Acquisition Team, Arlington, VA • January 2024 - Present</span>
+                    <ul>
+                        <li>Developed the Analysis Support Tool (AST) using Python to automate quarterly report generation, processing cost and schedule data in Excel to produce calculations and visualizations, reducing customer report creation time from weeks to seconds, earning "Star of the Month" twice, multiple nominations, and a special CGI award with monetary bonus</li>
+                        <li>Built the Content Analysis Tool using HTML, JavaScript, and Python's Pyvis library, leveraging NLTK and regex libraries to extract themes and patterns from reports, enabling customers to explore article-theme networks, filter data, and download reports for enhanced engagement</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Founder & Platform Developer</h3>
+                    <span class="date">Epic Event Solutions (EES) LLC • September 2025 - Present</span>
+                    <ul>
+                        <li>Co-Founded EES and developed "EPIC," a comprehensive wedding and event planning tool featuring interactive task checklists, timeline phasing with sequence-stepped dependencies, budget tracking, multi-user collaboration, and day-of timelines</li>
+                        <li>Built the application using JavaScript, Tailwind CSS, Stripe, Supabase, Netlify, and AI tools like Lovable</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Data Science Intern</h3>
+                    <span class="date">Thomson Reuters Special Services, McLean, VA • May 2022 - August 2022</span>
+                    <ul>
+                        <li>Contributed to a U.S. government-related data project by building a convolutional neural network for facial reidentification using Python and SageMaker</li>
+                        <li>Presented findings and technical work to company leaders</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Digital and Data Science Team Member</h3>
+                    <span class="date">Takeda, Lexington, MA • June 2020 - June 2021</span>
+                    <ul>
+                        <li>Improved production yield using manufacturing data through high-volume data entry in Statistica and reviewing team work to detect and correct errors</li>
+                        <li>Extracted and cleaned large datasets using SIMCA-Online and Excel to support data-driven process enhancements</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <p>Technical expertise and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <ul>
+                        <li>Artificial Intelligence (AI)</li>
+                        <li>Machine & Deep Learning</li>
+                        <li>Neural Networks (CNNs, Keras, TensorFlow, PyTorch)</li>
+                        <li>NLP (summarization, NER, NLTK)</li>
+                        <li>Statistical Modeling</li>
+                        <li>Regex for Pattern Extraction</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Tools & Languages</h3>
+                    <ul>
+                        <li>Python (pandas, scikit-learn, Pyvis)</li>
+                        <li>R</li>
+                        <li>SQL</li>
+                        <li>HTML & JavaScript</li>
+                        <li>AWS (SageMaker)</li>
+                        <li>Spark, Hadoop, Databricks</li>
+                        <li>Dash, Command Line</li>
+                        <li>Microsoft Excel, Git/GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Visualization</h3>
+                    <ul>
+                        <li>Tableau</li>
+                        <li>PowerBI</li>
+                        <li>Plotly</li>
+                        <li>ggplot2</li>
+                        <li>matplotlib, Seaborn</li>
+                        <li>Vega-Altair</li>
+                        <li>Processing</li>
+                        <li>Excel Charts, Network Graphs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="section-header">
+                <h2>Education</h2>
+                <p>Academic foundation and achievements</p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>M.S. in Data Science and Analytics</h3>
+                    <p class="institution">Georgetown University, Washington, DC</p>
+                    <p class="details">August 2021 - May 2023 • GPA: 4.0</p>
+                </div>
+                <div class="education-card">
+                    <h3>B.A. in Physics — Minor in Film</h3>
+                    <p class="institution">Mount Holyoke College, South Hadley, MA</p>
+                    <p class="details">August 2016 - May 2020 • Overall GPA: 3.8 • Major GPA: 3.8 • Magna Cum Laude</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
 </html>
